@@ -53,7 +53,7 @@ export default {
       details: '',
       description: '',
       image: '',
-      sell: false,
+      sell: true,
       category: '',
       quantity: 0
     }
