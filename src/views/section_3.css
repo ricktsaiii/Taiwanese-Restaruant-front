@@ -1,0 +1,149 @@
+.section_3{
+  width: 100%;
+  height: 100%;
+  background:url(../assets/section3_bg.jpg) no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(179, 148, 98);
+  position: relative;
+}
+
+.section_3 p{
+  color: rgb(255, 255, 255);
+}
+
+.line {
+  width: 95%;
+  height: 95%;
+  border: 2px solid rgb(179, 148, 98);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 3rem;
+  margin: 2rem 0 2rem 0;
+}
+.section_3_left{
+  /* background-color: rgb(134, 167, 139); */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem 0 2rem;
+  position: relative
+}
+
+.section_3_left h1{
+  font-family:'DFFNYS7.TTC';
+  font-weight:bold;
+  position:relative
+}
+
+.section_3_right{
+  width: 350px;
+  height: 350px;
+  background:url(../assets/about.jpg) no-repeat center/cover;
+  /* padding-right: 2rem; */
+  border-radius: 50%;
+
+}
+
+.line.row{
+  width: 100%;
+  height: 100%;
+}
+
+.btn_box{
+  width: 180px;
+  height: 180px;
+  position:absolute;
+  z-index:100;
+  right:-250px;
+  bottom:0px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+/* .btn_box:hover{
+  width: 180px;
+  height: 180px;
+  border-radius:50%;
+  background:red
+} */
+.btn_circle{
+  width:100%;
+  height:100%;
+  border:none;
+  border-radius:50%;
+  background:url(../assets/about_circle.png) no-repeat center/cover;
+  transition: all 0.3s linear;
+  position: relative;
+}
+
+.btn_circle:hover{
+  border:none;
+  background: rgba(179,148,98,0.2);
+  transition: all 0.3s linear;
+  /* background:url(../assets/about_circle.png) no-repeat center/cover; */
+}
+
+
+.btn_circle::before {
+  content: "View More";
+  color:rgb(179,148,98);
+  font-family:'DFFNYS7.TTC';
+  font-size: 14px;
+  font-weight:bold;
+  text-transform: uppercase;
+  font-style: italic;
+  display: inline-block;
+  position:absolute;
+  letter-spacing: 2pt;
+  width: 120px;
+  top:45%;
+  left:50%
+}
+.btn_circle::after {
+  content: "";
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:-70px;
+  top:0;
+  background:url(../assets/about_arrow.png) no-repeat center/cover;
+  animation: change 0.5s ;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+@keyframes change{
+  from {
+    margin-left: -10%;
+  }
+
+  to {
+    margin-left: 5%;
+  }
+}
+
+
+@media(max-width:992px) {
+  .section_3_right {
+    width:90%;
+    border-radius:0;
+    margin-top: 1rem;
+  }
+
+  .btn_box{
+    display:none;
+  }
+
+}
+
+@media(max-width:574px) {
+  .section_3_right {
+  height:200px;
+  }
+}
