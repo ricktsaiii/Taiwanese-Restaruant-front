@@ -14,10 +14,13 @@ import 'sweetalert2/dist/sweetalert2.min.css'
 import mixin from './mixin.js'
 import ImgInputer from 'vue-img-inputer'
 import 'vue-img-inputer/dist/index.css'
+import Loading from 'vue-loading-overlay'
+import 'vue-loading-overlay/dist/vue-loading.css'
 
 Vue.component('ImgInputer', ImgInputer)
 Vue.use(VueSweetalert2)
 Vue.mixin(mixin)
+Vue.component('Loading', Loading)
 
 Vue.config.productionTip = false
 

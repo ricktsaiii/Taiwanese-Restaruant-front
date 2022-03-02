@@ -1,5 +1,6 @@
 <template>
   <div id="onlineStore">
+  <loading :active.sync="isLoading" color="#B39462"></loading>
     <b-container fluid class="px-5 py-5">
       <b-carousel
           id="onlineStore_carousel"
@@ -54,13 +55,16 @@ export default {
     return {
       slide: 0,
       sliding: null,
-      products: []
+      products: [],
+      isLoading: false
     }
   },
   async created () {
     try {
+      this.isLoading = true
       const { data } = await this.api.get('/products')
       this.products = data.result
+      this.isLoading = false
     } catch (error) {
       this.$swal({
         icon: 'error',

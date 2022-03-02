@@ -111,6 +111,10 @@ padding-left: 117px;}
     height: 100vh;
   }
 
+    #nav-collapse ul{
+    padding: 0;
+  }
+
   .navbar_logo{
     visibility:visible
   }

@@ -146,4 +146,7 @@
   .section_3_right {
   height:200px;
   }
+  .section_3_left{
+    padding: 0;
+  }
 }

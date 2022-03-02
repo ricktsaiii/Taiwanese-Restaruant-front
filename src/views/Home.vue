@@ -20,8 +20,6 @@
       :interval="4000"
       controls
       indicators
-      img-width="1024"
-      img-height="300"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
@@ -126,7 +124,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  // position: relative;
+  position: relative;
+  overflow: hidden;
 }
 
 #logo{
@@ -135,19 +134,19 @@ export default {
 }
 
 #pig{
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
   position: absolute;
   left: 300px;
-  top: 50px;
+  top: -30px;
 }
 
 #cow{
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   position: absolute;
   right: 300px;
-  top: 70px;
+  top: 0px;
 }
 
 #knife_left{
@@ -187,5 +186,77 @@ z-index: 10;
 .carousel-control-next{
   background-image: linear-gradient(to right, rgb(0, 0, 0,0) 0%, rgb(0, 0, 0,1) 100%);
 }
+@media (max-width: 1550px) {
 
+#knife_left{
+position: absolute;
+left: 0%;
+z-index: 10;
+
+}
+  #pig{
+  width: 300px;
+  height: 300px;
+  left: 100px;
+  top: 0px;
+}
+#cow{
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  right: 80px;
+  top: 20px;
+}
+
+#knife_right{
+position: absolute;
+right: 2%;
+z-index: 10;
+}
+}
+@media (max-width: 574px) {
+
+#carousel-1{
+  height: 300px;
+}
+.carousel-inner{
+  width: 100%;
+  height: 100%;
+}
+.carousel-item {
+  height: 100%;
+  width: 100%;
+}
+.carousel-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#knife_left{
+position: absolute;
+left: -10%;
+z-index: 10;
+
+}
+  #pig{
+  width: 300px;
+  height: 300px;
+  left: -180px;
+  top: 50px;
+}
+#cow{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: -150px;
+  top: 70px;
+}
+
+#knife_right{
+position: absolute;
+right: -10%;
+z-index: 10;
+}
+}
 </style>
