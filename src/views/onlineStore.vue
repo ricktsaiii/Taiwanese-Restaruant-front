@@ -125,6 +125,7 @@ export default {
 
 .ProductCard{
   border: 0px;
+  border-radius: 0;
 }
 
 </style>

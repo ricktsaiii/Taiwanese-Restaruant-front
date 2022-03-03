@@ -1,15 +1,18 @@
 <template>
-<b-card class="card_product" img-top="img-top" :img-src="product.image">
-<b-card-body class="p-0">
-  <b-card-title>
-    <router-link :to='"/product/" + product._id'>
-      {{ product.name }}
-    </router-link>
-  </b-card-title>
-  <b-card-sub-title>
-{{ 'NT$' + product.price }}
-  </b-card-sub-title>
-</b-card-body>
+<b-card class="card_product">
+  <b-card-body class="p-0">
+    <div class="img">
+      <img :src="product.image">
+    </div>
+    <b-card-title>
+      <router-link :to='"/product/" + product._id'>
+        {{ product.name }}
+      </router-link>
+    </b-card-title>
+    <b-card-sub-title>
+  {{ 'NT$' + product.price }}
+    </b-card-sub-title>
+  </b-card-body>
 </b-card>
 </template>
 <script>
@@ -30,13 +33,27 @@ export default {
   font-weight: bold;
 }
 .card_product{
-  height: 250px;
   width: 250px;
   // border: 0;
+  border-radius: 0;
+}
+.card_product:hover img {
+  transform: scale(1.1);
+}
+.card_product img {
+  width: 100%;
+  height: 100%;
+  transition: transform .5s;
+  object-fit: cover;
+  object-position: center;
+}
+.card_product .img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 .card-body{
   padding: 0;
-  margin-left:0.5rem;
 
 }
 .card-body a{
