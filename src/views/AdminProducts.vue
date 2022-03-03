@@ -118,10 +118,10 @@
       </b-modal>
       <div class="admin_content">
         <b-nav pills class="admin_list">
-          <b-nav-item>全部商品</b-nav-item>
-          <b-nav-item>上架中</b-nav-item>
-          <b-nav-item>已下架</b-nav-item>
-          <b-nav-item>預約上架</b-nav-item>
+          <b-nav-item :active="tab === 0" @click="tab = 0">全部商品</b-nav-item>
+          <b-nav-item :active="tab === 1" @click="tab = 1">上架中</b-nav-item>
+          <b-nav-item :active="tab === 2" @click="tab = 2">已下架</b-nav-item>
+          <b-nav-item :active="tab === 3" @click="tab = 3">預約上架</b-nav-item>
         </b-nav>
         <div class="admin_right_rightList">
           <div class="dropdown">
@@ -142,7 +142,7 @@
       </div>
       <b-table
       id="admin_content_body"
-      :items="products"
+      :items="filtered"
       :fields="fields"
       ref="table"
       >
@@ -192,7 +192,8 @@ export default {
         category: '',
         _id: '',
         index: -1
-      }
+      },
+      tab: 0
     }
   },
   computed: {
@@ -202,6 +203,20 @@ export default {
         price: this.form.price === null ? null : this.form.price >= 0,
         category: this.form.category.length === 0 ? null : true
       }
+    },
+    filtered () {
+      return this.products.filter(product => {
+        switch (this.tab) {
+          case 0:
+            return true
+          case 1:
+            return product.sell
+          case 2:
+            return !product.sell
+          case 3:
+            return false
+        }
+      })
     }
   },
   methods: {
@@ -346,6 +361,10 @@ padding: 0;
 
 .nav-pills>.nav-item a:hover{
 background:rgb(179 148 98);
+color: white;
+}
+.nav-link.active{
+background:rgb(179 148 98) !important;
 color: white;
 }
 
