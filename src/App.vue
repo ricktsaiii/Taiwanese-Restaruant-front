@@ -9,7 +9,7 @@
             </b-navbar-brand>
             <b-nav-item to='/'>首 頁</b-nav-item>
             <b-nav-item to='/register'>渣腩料理</b-nav-item>
-            <b-nav-item to='/register'>預約訂位</b-nav-item>
+            <b-nav-item to='/appointment'>預約訂位</b-nav-item>
             <b-nav-item to='/onlineStore'>線上購買</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="account" >

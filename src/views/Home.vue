@@ -1,5 +1,6 @@
 <template>
 <div id="home">
+    <loading :active.sync="isLoading" color="#B39462"></loading>
   <div class="section_1">
     <div id="knife_left">
       <img src="../assets/knife_1.png" alt="">
@@ -43,7 +44,9 @@
               <div class="section_3_left">
                 <h1>about us</h1>
                 <p>
-                  夜市小吃，是台灣美食給人的第一印象，但手工繁複的精緻料理，卻被時間洪流掩沒。團隊費時兩年，蒐羅台灣的山珍海味，反覆運用台灣原生種食材做出老一輩中記憶的味道，我們求教老師傅，找尋老食譜，但也不排斥新式料理手法，希望用這片土地上種出來的食材，還原台菜最精彩的味道。
+                  夜市小吃，是台灣美食給人的第一印象，但手工繁複的精緻料理，卻被時間洪流掩沒。<br>
+                  團隊費時兩年，蒐羅台灣的山珍海味，反覆運用台灣原生種食材做出老一輩中記憶的味道，我們求教老師傅，找尋老食譜，但也不排斥新式料理手法，<br>
+                  希望用這片土地上種出來的食材，還原台菜最精彩的味道。
                 </p>
                 <div class="btn_box">
                   <b-button to="/register" class="btn_circle"></b-button>
@@ -68,8 +71,10 @@
             <p>
               大面積的窗戶，讓陽光從這棟老房從沒出現過的角度投射進屋。從屋外仰望，就是這棟老房從1963年留下至今的樓梯與手把，洗石子地板歷久彌新，實木手把更透著老屋與老臺灣才有的特殊回憶，步登上下樓， 裡外都是不同的風景。
             </p>
-            <p>
-            Stand silently decade after decade, collecting countless memories. We preserve this building’s original appearance and beauty while giving it new life, transformed an abandoned residential from the 1963 into an LivinGreen space. Left empty for a long period, and lacking sunlight and ventilation, it was first intended to be used as a police station, observing the local natural environment, and at the same time interacting with area residents. complimenting the surrounding landscape and blooming with greenery.
+            <p style="font-size: 8px;">
+            Stand silently decade after decade, collecting countless memories.<br>
+            We preserve this building’s original appearance and beauty while giving it new life, transformed an abandoned residential from the 1963 into an LivinGreen space. <br>
+            Left empty for a long period, and lacking sunlight and ventilation, it was first intended to be used as a police station, observing the local natural environment, and at the same time interacting with area residents. complimenting the surrounding landscape and blooming with greenery.
             </p>
           </div>
         </div>
@@ -98,8 +103,12 @@ export default {
   data () {
     return {
       slide: 0,
-      sliding: null
+      sliding: null,
+      isLoading: true
     }
+  },
+  created () {
+    this.isLoading = false
   },
   methods: {
     onSlideStart (slide) {

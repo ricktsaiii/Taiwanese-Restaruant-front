@@ -59,6 +59,17 @@ const routes = [
     }
   },
   {
+    path: 'appointment',
+    name: 'Appointment',
+    component: () =>
+      import(
+        /* webpackChunkName: "appointment" */ '../views/Appointment.vue'
+      ),
+    meta: {
+      title: '線上預約 - 渣腩底呷'
+    }
+  },
+  {
     path: '/cart',
     name: 'Cart',
     // route level code-splitting
