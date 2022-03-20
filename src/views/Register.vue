@@ -6,7 +6,7 @@
           <img src="../assets/logo.png" alt="logo" style="">
           <h3>會員專區</h3>
         </div>
-        <div class="col-12 body">
+        <div class="col-12 register_body">
           <b-tabs class="col-12" align="center">
             <b-tab title="登 入" title-link-class="abc" >
               <div class="log_in">
@@ -175,7 +175,7 @@ margin: 3rem 0 3rem 0;
 width: 200px;
 }
 
-.body{
+.register_body{
   width: 500px;
   height: 500px;
 }
@@ -245,18 +245,41 @@ color: rgb(90, 90, 90);
   color: white;
 }
 
-// .abc{
-//     background-color: rgb(179, 148, 98) !important;
-//   color: white;
-// }
+@media (max-width: 574px) {
 
-// #__BVID__23__BV_tab_controls_ .active::after {
-//   content:"";
-//   border: 2px rgb(255, 255, 255) solid;
-//   transform: rotate(0deg);
-//   top: 40px;
-//   width: 149px;
-//   position: absolute;
-//   left: 231px;
-// }
+#register>.container{
+  height: 600px;
+}
+
+.nav-tabs{
+  margin: 0;
+  width: 100%;
+}
+.register_body b-tab{
+  width: 50px;
+}
+
+.col-12 img {
+margin: 2rem 0 2rem 0;
+width: 200px;
+}
+
+#register h3{
+    font-size: 21px;
+  }
+
+.register_body{
+    width: 400px;
+    height: 400px;
+  }
+.log_in{
+    width: 400px;
+
+  }
+
+.sign_up{
+  width: 400px;
+}
+
+}
 </style>
