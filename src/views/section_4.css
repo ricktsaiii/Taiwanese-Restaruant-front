@@ -11,7 +11,6 @@
   justify-content: center;
   align-items: center;
 
-
 }
 
 .section_4_right {
@@ -36,4 +35,9 @@
     padding: 0 3rem 2rem 3rem;
   
   }
+  .section_4_left img {
+    width: 100%;
+    margin: 3rem
+  }
+  
 }

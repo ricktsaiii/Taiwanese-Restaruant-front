@@ -246,8 +246,11 @@ z-index: 10;
 position: absolute;
 left: -10%;
 z-index: 10;
-
 }
+#knife_left img{
+width: 140px;
+}
+
   #pig{
   width: 300px;
   height: 300px;
@@ -258,14 +261,21 @@ z-index: 10;
   width: 300px;
   height: 300px;
   position: absolute;
-  right: -150px;
-  top: 70px;
+  right: -180px;
+  top: 85px;
 }
 
 #knife_right{
 position: absolute;
 right: -10%;
 z-index: 10;
+}
+#knife_right img{
+width: 140px;
+}
+
+#logo img{
+  width: 250px;
 }
 }
 </style>

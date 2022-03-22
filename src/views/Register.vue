@@ -247,6 +247,10 @@ color: rgb(90, 90, 90);
 
 @media (max-width: 574px) {
 
+#register{
+  // height: 100vh;
+  height: 100vh
+}
 #register>.container{
   height: 600px;
 }
@@ -269,16 +273,16 @@ width: 200px;
   }
 
 .register_body{
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    height: 320px;
   }
 .log_in{
-    width: 400px;
+    width: 320px;
 
   }
 
 .sign_up{
-  width: 400px;
+  width: 320px;
 }
 
 }
