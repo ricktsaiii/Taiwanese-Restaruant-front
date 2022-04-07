@@ -159,7 +159,7 @@ export default {
 <style lang="scss" scoped>
 #register{
   // height: 100vh;
-  height: calc(100vh - 90px)
+  height: 100vh;
 }
 
 #register>.container{
